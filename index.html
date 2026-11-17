@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAG-Parts — Каталог автозапчастин</title>
+    <title>VAG-Parts — Інтернет-магазин автозапчастин</title>
     <style>
         * {
             box-sizing: border-box;
@@ -36,6 +36,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
         nav ul {
             display: flex;
@@ -51,19 +52,24 @@
         nav ul li a:hover {
             color: #f39c12;
         }
+        /* Стильний банер сайту */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80') center/cover;
+            background: linear-gradient(135deg, rgba(27, 79, 114, 0.92) 0%, rgba(44, 62, 80, 0.92) 100%), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&q=80') center/cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
+            border-bottom: 5px solid #f39c12;
         }
         .hero h1 {
             font-size: 34px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .hero p {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            color: #ecf0f1;
         }
         .container {
             width: 95%;
@@ -87,24 +93,25 @@
             margin-top: 20px;
         }
         .product-card {
-            border: 1px solid #ddd;
+            border: 1px solid #e0e0e0;
             border-radius: 6px;
-            background: #fafafa;
+            background: #fff;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .product-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
         .product-img {
             width: 100%;
             height: 180px;
             object-fit: cover;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
             background: #fff;
         }
         .product-content {
@@ -121,22 +128,23 @@
         }
         .articul {
             font-size: 13px;
-            color: #666;
-            margin-bottom: 8px;
+            color: #555;
+            margin-bottom: 6px;
         }
         .car-model {
             font-size: 13px;
-            color: #444;
+            color: #2980b9;
             margin-bottom: 12px;
-            background: #eee;
+            background: #ebf5fb;
             padding: 4px 6px;
             border-radius: 4px;
             display: inline-block;
+            font-weight: 500;
         }
         .price {
             color: #c0392b;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 19px;
             margin-bottom: 12px;
         }
         .btn {
@@ -195,21 +203,21 @@
         </div>
     </header>
 
-    <!-- Банер -->
+    <!-- Банер сайту -->
     <section id="home" class="hero">
-        <h1>Інтернет-магазин запчастин VAG</h1>
-        <p>Volkswagen, Audi, Skoda, Seat — оригінальні запчастини та надійні аналоги</p>
-        <a href="#catalog" class="btn" style="display:inline-block; width: auto; padding: 12px 25px; margin-top: 10px;">Перейти до каталогу</a>
+        <h1>Інтернет-магазин автозапчастин VAG</h1>
+        <p>Оригінальні деталі та якісні аналоги для Volkswagen, Audi, Skoda, Seat</p>
+        <a href="#catalog" class="btn" style="display:inline-block; width: auto; padding: 12px 30px; background: #f39c12; color: #fff;">Перейти до каталогу</a>
     </section>
 
-    <!-- Каталог товарів (12 позицій із реалістичними фото запчастин) -->
+    <!-- Каталог товарів (12 позицій з відповідними технічними фото) -->
     <div id="catalog" class="container">
         <h2>Каталог автозапчастин концерну VAG</h2>
         <div class="products-grid">
             
-            <!-- Товар 1 -->
+            <!-- Товар 1: Комплект ГРМ -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&q=80" alt="Комплект ГРМ" class="product-img">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=400&q=80" alt="Комплект ГРМ" class="product-img">
                 <div class="product-content">
                     <div>
                         <h4>Комплект ГРМ Gates</h4>
@@ -223,9 +231,9 @@
                 </div>
             </div>
 
-            <!-- Товар 2 -->
+            <!-- Товар 2: Гальмівні колодки -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=400&q=80" alt="Гальмівні колодки" class="product-img">
+                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=400&q=80" alt="Гальмівні колодки" class="product-img">
                 <div class="product-content">
                     <div>
                         <h4>Гальмівні колодки передні Brembo</h4>
@@ -239,9 +247,9 @@
                 </div>
             </div>
 
-            <!-- Товар 3 -->
+            <!-- Товар 3: Амортизатор -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" alt="Амортизатор" class="product-img">
+                <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=400&q=80" alt="Амортизатор" class="product-img">
                 <div class="product-content">
                     <div>
                         <h4>Амортизатор передній Sachs</h4>
@@ -255,9 +263,9 @@
                 </div>
             </div>
 
-            <!-- Товар 4 -->
+            <!-- Товар 4: Фільтр масляний -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80" alt="Фільтр масляний" class="product-img">
+                <img src="https://images.unsplash.com/photo-1527383418400-b3e8a4bb2f58?auto=format&fit=crop&w=400&q=80" alt="Фільтр масляний" class="product-img">
                 <div class="product-content">
                     <div>
                         <h4>Фільтр масляний MANN-FILTER</h4>
@@ -271,12 +279,12 @@
                 </div>
             </div>
 
-            <!-- Товар 5 -->
+            <!-- Товар 5: Свічка запалювання -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=400&q=80" alt="Свічка запалювання" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Свічка запалювання NGK (платинова)</h4>
+                        <h4>Свічка запалювання NGK</h4>
                         <div class="articul">Артикул: <strong>PZFR6R</strong></div>
                         <div class="car-model">Audi A4 / VW Passat B6</div>
                     </div>
@@ -287,14 +295,14 @@
                 </div>
             </div>
 
-            <!-- Товар 6 -->
+            <!-- Товар 6: Водяна помпа -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=400&q=80" alt="Водяна помпа" class="product-img">
+                <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=400&q=80" alt="Водяна помпа" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Водяна помпа (насос охолодження) SKF</h4>
+                        <h4>Водяна помпа SKF</h4>
                         <div class="articul">Артикул: <strong>VKPC 81408</strong></div>
-                        <div class="car-model">Seat Leon / VW Polo / Skoda Fabia</div>
+                        <div class="car-model">Seat Leon / Skoda Fabia</div>
                     </div>
                     <div>
                         <div class="price">1 450 грн</div>
@@ -303,12 +311,12 @@
                 </div>
             </div>
 
-            <!-- Товар 7 -->
+            <!-- Товар 7: Важіль підвіски -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&q=80" alt="Важіль підвіски" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Важіль підвіски передній Lemforder</h4>
+                        <h4>Важіль підвіски Lemforder</h4>
                         <div class="articul">Артикул: <strong>35558 01</strong></div>
                         <div class="car-model">Audi A6 C6 / VW Passat CC</div>
                     </div>
@@ -319,7 +327,7 @@
                 </div>
             </div>
 
-            <!-- Товар 8 -->
+            <!-- Товар 8: Комплект зчеплення -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=400&q=80" alt="Зчеплення" class="product-img">
                 <div class="product-content">
@@ -335,12 +343,12 @@
                 </div>
             </div>
 
-            <!-- Товар 9 -->
+            <!-- Товар 9: Підшипник маточини -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=400&q=80" alt="Підшипник маточини" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Підшипник маточини колеса FAG</h4>
+                        <h4>Підшипник маточини FAG</h4>
                         <div class="articul">Артикул: <strong>713 6106 10</strong></div>
                         <div class="car-model">Volkswagen Golf 6 / Touran</div>
                     </div>
@@ -351,12 +359,12 @@
                 </div>
             </div>
 
-            <!-- Товар 10 -->
+            <!-- Товар 10: Гальмівний диск -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=400&q=80" alt="Гальмівний диск" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Гальмівний диск задній Textar</h4>
+                        <h4>Гальмівний диск Textar</h4>
                         <div class="articul">Артикул: <strong>92158803</strong></div>
                         <div class="car-model">Audi A4 / Skoda Superb</div>
                     </div>
@@ -367,12 +375,12 @@
                 </div>
             </div>
 
-            <!-- Товар 11 -->
+            <!-- Товар 11: Радіатор охолодження -->
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?auto=format&fit=crop&w=400&q=80" alt="Радіатор" class="product-img">
                 <div class="product-content">
                     <div>
-                        <h4>Радіатор охолодження двигателя Behr</h4>
+                        <h4>Радіатор охолодження Behr</h4>
                         <div class="articul">Артикул: <strong>CR 757 000P</strong></div>
                         <div class="car-model">Volkswagen Passat B6</div>
                     </div>
@@ -383,9 +391,9 @@
                 </div>
             </div>
 
-            <!-- Товар 12 -->
+            <!-- Товар 12: Котушка запалювання -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=400&q=80" alt="Котушка запалювання" class="product-img">
+                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=400&q=80" alt="Котушка запалювання" class="product-img">
                 <div class="product-content">
                     <div>
                         <h4>Котушка запалювання Bosch</h4>
