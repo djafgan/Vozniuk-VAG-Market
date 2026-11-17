@@ -54,7 +54,7 @@
         }
         /* Стильний банер сайту */
         .hero {
-            background: linear-gradient(135deg, #1b4f72 0%, #2c3e50 100%);
+            background: linear-gradient(135deg, rgba(27, 79, 114, 0.92) 0%, rgba(44, 62, 80, 0.92) 100%), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1200&q=80') center/cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
@@ -99,7 +99,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 20px;
+            overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -107,10 +107,25 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+        .product-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
         .product-card h4 {
             color: #1b4f72;
-            margin-bottom: 10px;
-            font-size: 17px;
+            margin-bottom: 8px;
+            font-size: 16px;
         }
         .articul {
             font-size: 13px;
@@ -120,9 +135,9 @@
         .car-model {
             font-size: 13px;
             color: #2980b9;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             background: #ebf5fb;
-            padding: 5px 8px;
+            padding: 4px 6px;
             border-radius: 4px;
             display: inline-block;
             font-weight: 500;
@@ -130,8 +145,8 @@
         .price {
             color: #c0392b;
             font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: 19px;
+            margin-bottom: 12px;
         }
         .btn {
             background: #27ae60;
@@ -196,112 +211,136 @@
         <a href="#catalog" class="btn" style="display:inline-block; width: auto; padding: 12px 30px; background: #f39c12; color: #fff;">Перейти до каталогу</a>
     </section>
 
-    <!-- Каталог товарів (8 позицій без фото) -->
+    <!-- Каталог товарів (8 точних позицій за вашим списком) -->
     <div id="catalog" class="container">
         <h2>Каталог автозапчастин концерну VAG</h2>
         <div class="products-grid">
             
             <!-- Товар 1 -->
             <div class="product-card">
-                <div>
-                    <h4>Комплект ГРМ Gates</h4>
-                    <div class="articul">Артикул: <strong>K015630XS</strong></div>
-                    <div class="car-model">VW Golf 6 / Skoda Octavia A5</div>
-                </div>
-                <div>
-                    <div class="price">3 450 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://motorno.com.ua/feed-img/9/991b90d13d6e8a7d56ff5e41020e4827.jpg" alt="Комплект грм Gates" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Комплект ГРМ Gates</h4>
+                        <div class="articul">Артикул: <strong>K015630XS</strong></div>
+                        <div class="car-model">VW Golf 6 / Skoda Octavia A5</div>
+                    </div>
+                    <div>
+                        <div class="price">3 450 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 2 -->
             <div class="product-card">
-                <div>
-                    <h4>Гальмівні колодки передні Brembo</h4>
-                    <div class="articul">Артикул: <strong>P 85 075</strong></div>
-                    <div class="car-model">Audi A3 / VW Passat B7</div>
-                </div>
-                <div>
-                    <div class="price">1 820 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://digital-assets.tecalliance.services/images/800/b85d4d4dd7a15dc82a5d73e84263b4727d8b5781.jpg" alt="Гальмівні колодки" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Гальмівні колодки передні Brembo</h4>
+                        <div class="articul">Артикул: <strong>P 85 075</strong></div>
+                        <div class="car-model">Audi A3 / VW Passat B7</div>
+                    </div>
+                    <div>
+                        <div class="price">1 820 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 3 -->
             <div class="product-card">
-                <div>
-                    <h4>Амортизатор передній Sachs</h4>
-                    <div class="articul">Артикул: <strong>313 559</strong></div>
-                    <div class="car-model">VW Golf 5/6 / Jetta</div>
-                </div>
-                <div>
-                    <div class="price">2 900 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://cdn.autodoc.de/thumb?id=14922297&m=0&n=0&lng=de&rev=94078113" alt="Амортизатор передній" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Амортизатор передній Sachs</h4>
+                        <div class="articul">Артикул: <strong>313 559</strong></div>
+                        <div class="car-model">VW Golf 5/6 / Jetta</div>
+                    </div>
+                    <div>
+                        <div class="price">2 900 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 4 -->
             <div class="product-card">
-                <div>
-                    <h4>Фільтр масляний MANN-FILTER</h4>
-                    <div class="articul">Артикул: <strong>W 719/45</strong></div>
-                    <div class="car-model">Skoda Octavia / VW / Audi</div>
-                </div>
-                <div>
-                    <div class="price">420 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://autoteile-werkzeuge.de/media/image/product/2448/lg/mann-filter-oelfilter-w-719-45-vag-audi-seat-skoda-vw.jpg" alt="Фільтр масляний" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Фільтр масляний MANN-FILTER</h4>
+                        <div class="articul">Артикул: <strong>W 719/45</strong></div>
+                        <div class="car-model">Skoda Octavia / VW / Audi</div>
+                    </div>
+                    <div>
+                        <div class="price">420 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 5 -->
             <div class="product-card">
-                <div>
-                    <h4>Свічка запалювання NGK</h4>
-                    <div class="articul">Артикул: <strong>PZFR6R</strong></div>
-                    <div class="car-model">Audi A4 / VW Passat B6</div>
-                </div>
-                <div>
-                    <div class="price">480 грн/шт</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://content1.rozetka.com.ua/goods/images/big/332465681.jpg" alt="Свічка запалювання NGK" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Свічка запалювання NGK</h4>
+                        <div class="articul">Артикул: <strong>PZFR6R</strong></div>
+                        <div class="car-model">Audi A4 / VW Passat B6</div>
+                    </div>
+                    <div>
+                        <div class="price">480 грн/шт</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 6 -->
             <div class="product-card">
-                <div>
-                    <h4>Водяна помпа (насос)</h4>
-                    <div class="articul">Артикул: <strong>VKPC 81408</strong></div>
-                    <div class="car-model">Volkswagen Golf / Skoda</div>
-                </div>
-                <div>
-                    <div class="price">1 450 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://images.prom.ua/4982493230_w640_h320_pompa-volkswagen-golf.jpg" alt="Помпа Volkswagen" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Водяна помпа (насос)</h4>
+                        <div class="articul">Артикул: <strong>VKPC 81408</strong></div>
+                        <div class="car-model">Volkswagen Golf / Skoda</div>
+                    </div>
+                    <div>
+                        <div class="price">1 450 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 7 -->
             <div class="product-card">
-                <div>
-                    <h4>Важіль підвіски Lemforder</h4>
-                    <div class="articul">Артикул: <strong>35558 01</strong></div>
-                    <div class="car-model">Audi A6 C6 / VW Passat CC</div>
-                </div>
-                <div>
-                    <div class="price">2 650 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzyWHWsS0ZU5U5kAB-G2kfzmuOZfTlKz_n9aSQ1FNvGg&s" alt="Ричаг Лемфьордер" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Важіль підвіски Lemforder</h4>
+                        <div class="articul">Артикул: <strong>35558 01</strong></div>
+                        <div class="car-model">Audi A6 C6 / VW Passat CC</div>
+                    </div>
+                    <div>
+                        <div class="price">2 650 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
             <!-- Товар 8 -->
             <div class="product-card">
-                <div>
-                    <h4>Комплект зчеплення LuK</h4>
-                    <div class="articul">Артикул: <strong>624 3326 00</strong></div>
-                    <div class="car-model">Skoda Octavia A5 1.6 MPI</div>
-                </div>
-                <div>
-                    <div class="price">4 700 грн</div>
-                    <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzyWHWsS0ZU5U5kAB-G2kfzmuOZfTlKz_n9aSQ1FNvGg&s" alt="Сцепление" class="product-img">
+                <div class="product-content">
+                    <div>
+                        <h4>Комплект зчеплення LuK</h4>
+                        <div class="articul">Артикул: <strong>624 3326 00</strong></div>
+                        <div class="car-model">Skoda Octavia A5 1.6 MPI</div>
+                    </div>
+                    <div>
+                        <div class="price">4 700 грн</div>
+                        <button class="btn" onclick="alert('Товар додано до кошика!')">Купити</button>
+                    </div>
                 </div>
             </div>
 
